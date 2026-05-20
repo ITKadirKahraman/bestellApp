@@ -1,0 +1,536 @@
+/*
+****** navigation
+*/
+.header {
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: var(--background-color);
+    height: 100px;
+    width: 100vw;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 calc((100% - 1440px) / 2);
+    max-width: 1920px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*
+****** header
+*/
+
+.headerContainer {
+    padding: 0 calc((100% - 1440px) / 2);
+}
+
+.headerImg {
+    background-image: url(assets/img/header.png);
+    background-position: bottom;
+    background-size: cover;
+    height: 400px;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+}
+
+.headerInformation {
+    text-align: center;
+    text-wrap: balance;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 24px 60px;
+    margin-top: 20px;
+}
+
+.headerTitle {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 32px;
+}
+
+.burgerText {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.burgerText span{
+    color: var(--background-color);
+}
+
+.starContainer {
+    background-color: var(--color-starBackground);
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    padding: 4px;
+    gap: 8px;
+}
+
+.ranting {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.commentsNumber {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-commentsBackground);
+}
+
+.headerText {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/*
+****** category section side´s
+*/
+
+.contentSides {
+    gap: 2px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 0 calc((100% - 1440px) / 2);
+}
+
+.dishesContent {
+    width: calc(100% - 408px);
+}
+
+.basketContent {
+    position: sticky;
+    top: 0px;
+    align-self: flex-start;
+    width: 350px;
+    flex-grow: 1;
+}
+
+/*
+****** menu category all
+*/
+
+.categoryWrapper {
+    position: relative;
+    left: 71%;
+    transform: translateX(-51%);
+    width: 99.9vw;
+    height: 60px;
+}
+
+.categorySeperator {
+    position: absolute;
+    inset: 0;
+    background-color: var(--background-color);
+    z-index: -1;
+}
+
+.categoryIcon {
+    margin-left: 80px;
+}
+
+h2 {
+    color: var(--color-white);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.h2Container {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0 24px;
+}
+
+.dishesIcon {
+    height: 90px;
+    margin-bottom: 20px;
+    margin-left: 400px;
+}
+
+/*
+****** card
+*/
+
+.sectionBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-light);
+    border-radius: 12px;
+    height: 300px;
+    width: 712px;
+}
+
+.cardImg {
+    border-radius: 24px;
+    height: 80px;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    padding: 12px;
+}
+
+.cardHeader {
+    text-align: start;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.cardSubtext {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    height: 20px;
+    padding-bottom: 60px;
+}
+
+.priceAndAdd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.price strong {
+    font-weight: 600;
+    font-size: 20px;
+    vertical-align: auto;
+}
+
+.btnAddBasket {
+    border: var(--color-white);
+    border-radius: 20px;
+    height: 30px;
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+.btnAddBasket:hover {
+    color: var(--background-color);
+    background-color: black;
+}
+
+.basketText {
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+}
+
+/*
+******* footer section
+*/
+
+.footerContainer{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.footerNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.copyright {
+    vertical-align: sub;
+    height: 18px;
+}
+
+/*
+****** query subfooter
+*/
+
+.subFooterContainer {
+    display: none;
+}
+
+/*
+****** basket section
+*/
+
+.basketSection {
+    background-color: var(--color-basketBackground);
+    height: min(600px, calc(100vh - 100px));
+    width: 95%;
+    border-radius: 30px 0 0 30px;
+    padding: 50px 2px;
+}
+
+/* full basket section */
+
+.closeBtn {
+    display: none;
+}
+
+h3 {
+    color: var(--color-basketCard);
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.itemsScroll {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-basketCard) var(--color-black);
+    max-height: 400px;
+}
+
+.basketCard {
+    background-color: var(--color-basketCard);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 10px 0 0 0;
+    margin-left: 15%;
+    height: 70px;
+    width: 280px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.basketOrderDishes {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.basketCardBotton {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.switchTrashMinusPlus {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+}
+
+.removeCount {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.trash {
+    height: 24px;
+    align-items: center;
+    vertical-align: auto;
+}
+
+.removeCount:hover .trash {
+    content: url("assets/icons/trashHover.svg");
+}
+
+.minus {
+    width: 24px;
+    font-weight: 600;
+}
+
+.removeCount:hover .minus {
+    content: url("assets/icons/minusHover.svg");
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.btnPlus {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.plus {
+    width: 24px;
+    font-weight: 600;
+}
+
+.btnPlus:hover .plus {
+    content: url("assets/icons/plusHover.svg")
+}
+
+.basketPrice {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* calculator basket section */
+.calculator {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 10px 0 0 0;
+    margin-left: 15%;
+    font-size: 16px;
+    font-weight: 600;
+    width: 280px;
+    color: var(--color-white);
+}
+
+table {
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+td {
+    padding: 0;
+}
+
+.tdEnd {
+    text-align: end;
+}
+
+th {
+    border-top: 2px solid var(--color-white);
+    text-align: start;
+    padding: 0;
+}
+
+.btnBuyNow {
+    background: var(--background-color);
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 25px;
+    height: 50px;
+}
+
+.btnBuyNow:hover {
+    color: black;
+    border-color: white;
+}
+
+/* empty basket section */
+
+.basketIsEmpty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+}
+
+.basketIsEmpty .closeBtn {
+    display: none;
+}
+
+.emptyH3 {
+    color: var(--color-basketCard);
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.emptyP {
+    text-align: center;
+    color: var(--color-basketCard);
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.emptyImg {
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;
+}
+
+/* order section */
+
+.orderContainer {
+    background: var(--color-basketBackground);
+    border-radius: 25px;
+    height: 250px;
+    width: 450px;
+}
+
+.closeBtnOrder {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    height: 24px;
+    width: 24px;
+}
+
+.close {
+    height: 100%;
+}
+
+.orderText {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.carImg {
+    height: 48px;
+}
+
+.orderP {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-basketCard);
+}

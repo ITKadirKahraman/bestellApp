@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@300;400;500;600;700&display=swap');
+
+:root{
+    /*
+    ****** COLORS
+    */
+    --background-color: rgb(231, 108, 31);
+    --color-light: rgba(253, 234, 220, 1);
+    --color-starBackground: rgb(250, 202, 172);
+    --color-commentsBackground: rgb(114, 109, 109);
+    --color-white: rgb(255, 255, 255);
+    --color-light: rgba(253, 234, 220);
+    --color-subFooterColor: rgb(54, 53, 52);
+    --color-basketCard: rgb(253,234,220);
+    --color-basketBackground: rgb(54, 53, 52);
+    --color-black: rgb(0, 0, 0);
+
+    /*
+    ****** Font
+    */
+
+    --font-family: 'Palanquin';
+
+    /*
+    ****** SIZE
+    */
+    --size-0: 0;
+
+    /* px */
+    --size-188px: 188px;
+
+    /* % */
+    --size-100P: 100%;
+    
+    /* vh */
+    --size-100vh: 100vh;
+
+}

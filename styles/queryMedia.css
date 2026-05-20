@@ -1,0 +1,593 @@
+@media (max-width: 1090px) {
+    .cardSubtext {
+        font-size: 15px;
+        height: 20px;
+    }
+}
+
+
+@media (max-width: 925px) {
+    .headerImg {
+        height: 200px;
+    }
+
+    .headerInformation {
+        padding: 10px 24px 20px;
+        margin-top: 60px;
+    }
+
+    .headerTitle {
+        gap: 10px;
+    }
+
+    .circleImg {
+        top: 220px;
+        height: 130px;
+    }
+
+    .burgerText {
+        font-size: 32px;
+    }
+
+    .headerText {
+        font-size: 18px;
+    }
+
+    .navContainer {
+        padding: 0 40px;
+    }
+
+    .basketSection {
+        width: 350px;
+    }
+
+    .sectionBurger {
+        padding: 10px;
+    }
+
+    .cardSubtext {
+        font-size: 16px;
+    }
+
+    .dNone {
+        display: none;
+    }
+
+    .basketIsEmpty .closeBtn {
+        display: flex;
+        margin-left: -70%;
+    }
+
+    .basketIsEmpty .emptyH3 {
+        margin-top: 10px;
+    }
+
+    .cardHeader {
+        font-size: 18px;
+    }
+
+    .basketIsEmpty .closeBtn {
+        display: none;
+    }
+
+    .emptyP {
+        margin-top: 20px;
+    }
+
+    .emptyImg {
+        margin-top: 20px;
+    }
+
+    .categoryWrapper {
+        left: 94%;
+    }
+
+    .basketCard {
+        margin-left: 10%;
+    }
+
+    .basketOrderDishes {
+        font-size: 16px;
+    }
+
+    .orderContainer {
+        height: 200px;
+        width: 250px;
+    }
+
+    .dishesIcon {
+        margin-left: 50px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 880px) {
+    .contentSides {
+        flex-direction: column;
+        flex-grow: 2;
+        gap: 0;
+        padding: 0;
+    }
+
+    .basketIsEmpty .closeBtn {
+        display: flex;
+    }
+
+    .dishesContent {
+        width: 75%;
+    }
+
+    .sectionBurger {
+        padding: 10px;
+        margin-left: 15%;
+    }
+
+    .sectionBurger {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footerContainer {
+        margin-bottom: 60px;
+    }
+
+    .basketContent {
+        display: none;
+    }
+
+    .closeContainer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    .closeBtn {
+        display: flex;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .close {
+        height: 24px;
+    }
+
+    .closeBtn:hover .close {
+        content: url(../assets/icons/closeHover.svg);
+        height: 24px;
+    }
+
+    .basketSection {
+        background-color: var(--color-basketBackground);
+        height: min(450px, calc(100vh - 100px));
+        border-radius: 30px 30px 0 0;
+    }
+
+    .itemsScroll {
+        max-height: 130px;
+    }
+
+    .basketCard {
+        width: 70%;
+    }
+
+    .calculator {
+        width: 80%;
+    }
+
+    .btnBuyNow {
+        height: 75px;
+    }
+
+    .showBasket {
+        background-color: var(--color-basketBackground);
+        display: block;
+        bottom: 0;
+        left: 20%;
+        width: 350px;
+        border-radius: 30px 30px 0 0;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .subFooterContainer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--color-subFooterColor);
+        height: 60px;
+    }
+
+    .subFooterButton {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .subFooterButton:hover .shopping {
+        content: url(../assets/icons/basketShoppingCardHover.svg);
+        height: 24px;
+    }
+
+    .start:hover .home {
+        content: url(../assets/icons/homeHover.svg);
+        height: 24px;
+    }
+
+    .subFooterButton:hover .person {
+        content: url(../assets/icons/personHover.svg);
+        height: 24px;
+    }
+
+    .menu:hover .takeout {
+        content: url(../assets/icons/takeoutHover.svg);
+        height: 24px;
+    }
+
+    .categoryWrapper {
+        left: 67%;
+    }
+
+    .dishesIcon {
+        margin-left: 250px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .h2Container {
+        gap: 10px;
+    }
+
+    .dishesIcon {
+        margin-left: 180px;
+    }
+}
+
+@media (max-width: 520px){
+    .headerTitle {
+        flex-direction: column-reverse;
+        padding: 10px 10px 5px 10px;
+    }
+
+    .categoryWrapper {
+        left: 53.5%;
+    }
+
+    .dishesIcon {
+        margin-left: 150px;
+    }
+
+    .contentSides {
+        flex-direction: column;
+        flex-grow: 2;
+        gap: 0;
+        padding: 0;
+    }
+
+    .dishesContent {
+        width: 490px;
+    }
+
+    .sectionBurger {
+        padding: 4px;
+        margin: 0;
+    }
+
+    .showBasket {
+        background-color: var(--color-basketBackground);
+        display: block;
+        bottom: 0;
+        left: 10%;
+        width: 80%;
+        border-radius: 30px 30px 0 0;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .card {
+        width: 75%;
+    }
+
+    .basketCard {
+        width: 80%;
+    }
+}
+
+@media (max-width: 490px){
+    .dishesContent {
+        width: 440px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .sectionBurger {
+        padding-left: 1px;
+    }
+
+    .navContainer {
+        height: 60px;
+    }
+
+    .imgBar {
+        display: none;
+    }
+
+    .headerText {
+        margin: 0;
+    }
+
+    .h2Container {
+        justify-content: center;
+        flex-direction: row;
+        gap: 0;
+        margin-left: 0px;
+    }
+
+    .categoryIcon {
+        margin: 0;
+    }
+
+    .dishesIcon {
+        height: 60px;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 30px;
+    }
+
+    .footerContainer {
+        height: 100px;
+    }
+
+    .footerNav {
+        flex-direction: column;
+    }
+
+    #topToBot {
+        order: 3;
+    }
+
+    #midToTop {
+        order: 1;
+    }
+
+    #botToMid {
+        order: 2;
+    }
+
+    .categoryWrapper {
+        left: 54.5%;
+    }
+}
+
+@media (max-width: 470px){
+    .categoryWrapper {
+        left: 54%;
+    }
+    .sectionBurger {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 463px){
+    .categoryWrapper {
+        left: 53.5%;
+    }
+    .sectionBurger {
+        margin-left: 2px;
+    }
+}
+
+@media (max-width: 460px){
+    .categoryWrapper {
+        left: 52.9%;
+    }
+}
+
+@media (max-width: 454px){
+    .categoryWrapper {
+        left: 52%;
+    }
+}
+
+@media (max-width: 448px){
+    .categoryWrapper {
+        left: 51.5%;
+    }
+}
+
+@media (max-width: 440px){
+    .dishesContent {
+        width: 380px;
+    }
+
+    .sectionBurger {
+        padding-left: 20px;
+    }
+
+    .showBasket {
+        width: 80%;
+    }
+
+    .basketSection {
+        width: 95%;
+    }
+
+    .basketCard {
+        width: 80%;
+    }
+
+    .calculator {
+        width: 80%;
+    }
+
+    .cardSubtext {
+        font-size: 12px;
+    }
+
+    .btnBuyNow {
+        font-size: 18px;
+    }
+
+    .categoryWrapper {
+        left: 58.5%;
+    }
+}
+
+@media (max-width: 435px){
+    .categoryWrapper {
+        left: 57%;
+    }
+}
+
+@media (max-width: 424px){
+    .categoryWrapper {
+        left: 56.9%;
+    }
+}
+
+@media (max-width: 417px){
+    .categoryWrapper {
+        left: 69%;
+    }
+}
+
+@media (max-width: 421px){
+    .categoryWrapper {
+        left: 56%;
+    }
+}
+
+@media (max-width: 386px){
+    .dishesContent {
+        width: 300px;
+    }
+
+    .sectionBurger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        background-color: var(--color-light);
+        border-radius: 12px;
+        height: 280px;
+        width: 90%;
+    }
+
+    .basketCard {
+        width: 82%;
+        height: 80px;
+    }
+
+    .categoryWrapper {
+        left: 64.5%;
+    }
+}
+
+@media (max-width: 375px) {
+    .categoryWrapper {
+        left: 63%;
+    }
+
+    .showBasket {
+        width: 100%;
+    }
+
+    .sectionBurger {
+        padding: 1%;
+    }
+}
+
+@media (max-width: 364px) {
+    .categoryWrapper {
+        left: 62%;
+    }
+}
+
+@media (max-width: 355px) {
+    .categoryWrapper {
+        left: 60%;
+    }
+}
+
+@media (max-width: 351px) {
+    .categoryWrapper {
+        left: 59%;
+    }
+}
+
+@media (max-width: 346px) {
+    .categoryWrapper {
+        left: 58.5%;
+    }
+}
+
+@media (max-width: 340px) {
+    .categoryWrapper {
+        left: 57%;
+    }
+}
+
+@media (max-width: 333px) {
+    .categoryWrapper {
+        left: 55.9%;
+    }
+
+    .card {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 328px) {
+    .categoryWrapper {
+        left: 55.5%;
+    }
+}
+
+@media (max-width: 325px) {
+    .categoryWrapper {
+        left: 55%;
+    }
+}
+
+@media (max-width: 320px) {
+    .sectionBurger {
+        padding: 1%;
+        padding-left: 8px;
+    }
+
+    .categoryWrapper {
+        left: 54%;
+    }
+
+    .showBasket {
+        width: 100%;
+    }
+
+    .basketCard {
+        width: 80%;
+    }
+
+    .basketCardBotton {
+        height: 20px;
+    }
+
+    .btnBuyNow {
+        margin-right: 15px;
+    }
+}
