@@ -121,7 +121,7 @@ Während dieses Projekts habe ich folgende Themen vertieft:
 
 ## 👨‍💻 Entwickler
 
-Entwickelt von Christopher Braun
+Entwickelt von Kadir Kahraman
 
 ---
 
