@@ -1,23 +1,25 @@
-# 🍔 BurgerHouse – Food Ordering Web App
+# 🍔 BestellApp
 
-Eine responsive Food-Ordering-Webanwendung, entwickelt mit **HTML**, **CSS** und **JavaScript**.  
-Benutzer können Gerichte durchsuchen, Produkte zum Warenkorb hinzufügen, Mengen anpassen und Bestellungen über eine moderne Benutzeroberfläche abschließen.
+Eine moderne und responsive Bestellplattform, entwickelt mit **HTML**, **CSS** und **Vanilla JavaScript**.  
+Benutzer können verschiedene Gerichte durchsuchen, Produkte in den Warenkorb legen, Mengen anpassen und den Gesamtpreis inklusive Lieferkosten berechnen. Der Warenkorb wird zusätzlich im **LocalStorage** gespeichert, sodass Bestellungen beim erneuten Öffnen der Seite erhalten bleiben.
 
 ---
 
 ## 🚀 Features
 
 - 🍔 Dynamisches Rendern der Gerichte
+- 🍕 Kategorien für Burger, Pizza und Salate
 - 🛒 Interaktiver Warenkorb
-- ➕ Menge erhöhen / verringern
-- 💾 Speicherung mit LocalStorage
-- 📱 Responsive Design
-- 📦 Bestellbestätigung per Dialog
-- 🎨 Modernes UI mit Flexbox & CSS Variablen
-- 🍕 Mehrere Kategorien:
-  - Burger
-  - Pizza
-  - Salate
+- ➕ Artikel hinzufügen
+- ➖ Menge erhöhen und verringern
+- 🗑️ Produkte automatisch entfernen, wenn die Menge 0 erreicht
+- 💰 Automatische Berechnung von:
+  - Zwischensumme
+  - Lieferkosten
+  - Gesamtpreis
+- 💾 Speicherung des Warenkorbs im LocalStorage
+- 📱 Responsive Design für Desktop, Tablet und Smartphone
+- 📦 Bestellbestätigung über Dialogfenster
 
 ---
 
@@ -25,27 +27,33 @@ Benutzer können Gerichte durchsuchen, Produkte zum Warenkorb hinzufügen, Menge
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla JS)
+- JavaScript (ES6)
 - LocalStorage API
 - Flexbox
 - Responsive Webdesign
+- Node.js Test Runner (`node:test`)
 
 ---
 
 ## 📸 Vorschau
 
-![BurgerHouse Preview](assets/img/header.png)
+![BestellApp Preview](assets/img/header.png)
 
 ---
 
 ## 📂 Projektstruktur
 
-```bash
-project/
+```text
+BestellApp/
 │
 ├── assets/
 │   ├── icons/
 │   └── img/
+│
+├── scripts/
+│   ├── db.js
+│   ├── templates.js
+│   └── ...
 │
 ├── styles/
 │   ├── root.css
@@ -53,78 +61,132 @@ project/
 │   ├── assets.css
 │   └── queryMedia.css
 │
-├── scripts/
-│   ├── templates.js
-│   └── db.js
-│
 ├── script.js
 ├── styles.css
-└── index.html
+├── index.html
+└── package.json
 ```
 
 ---
 
 ## ⚙️ Installation
 
-1. Repository klonen:
+Repository klonen
 
 ```bash
-git clone https://github.com/dein-benutzername/burgerhouse.git
+git clone https://github.com/ITKadirKahraman/bestellApp.git
 ```
 
-2. In den Projektordner wechseln:
+In den Projektordner wechseln
 
 ```bash
-cd burgerhouse
+cd bestellApp
 ```
 
-3. Mit Live Server starten oder `index.html` direkt im Browser öffnen.
+Projekt starten
+
+```bash
+index.html
+```
+
+oder mit Live Server öffnen.
+
+---
+
+## 🧪 Unit Tests
+
+Für die Kernfunktionen der Anwendung wurden Unit Tests mit dem nativen **Node.js Test Runner** erstellt.
+
+### Getestete Funktionen
+
+- ✅ Berechnung des Gesamtpreises
+- ✅ Berechnung der Artikelmenge
+- ✅ Hinzufügen von Produkten zum Warenkorb
+- ✅ Prüfung von Produktobjekten
+- ✅ Überprüfung von Array-Strukturen
+
+### Test-Framework
+
+- Node.js (`node:test`)
+- assert/strict
+
+### Tests starten
+
+```bash
+npm test
+```
+
+Beispiel:
+
+```javascript
+test("berechnet den Gesamtpreis", () => {
+    const basket = [
+        {
+            name: "Pizza",
+            price: 15,
+            amount: 2
+        }
+    ];
+
+    assert.equal(berechneGesamtpreis(basket), 30);
+});
+```
 
 ---
 
 ## 📱 Responsive Design
 
-Die Anwendung ist optimiert für:
+Die Anwendung wurde für verschiedene Bildschirmgrößen optimiert.
 
-- Desktop
-- Tablet
-- Smartphones
+Unterstützt werden:
 
-Für mobile Geräte wurde zusätzlich ein eigenes Warenkorb-Verhalten integriert.
+- 💻 Desktop
+- 📱 Smartphone
+- 📲 Tablet
+
+Auf kleineren Geräten wird der Warenkorb als seitliches Overlay dargestellt.
 
 ---
 
-## 🧠 Was ich gelernt habe
+## 🧠 Was ich in diesem Projekt gelernt habe
 
-Während dieses Projekts habe ich folgende Themen vertieft:
+Während der Entwicklung konnte ich meine Kenntnisse in folgenden Bereichen vertiefen:
 
-- DOM-Manipulation
 - Dynamisches Rendern mit JavaScript
-- Arbeiten mit Arrays
+- DOM-Manipulation
+- Arbeiten mit Arrays und Objekten
 - Event Handling
-- Responsive Layouts
-- Speicherung mit LocalStorage
-- Strukturierte Template-Funktionen
+- LocalStorage
+- Responsive Webdesign
+- Komponentenbasierter Aufbau
+- Berechnungen mit JavaScript
+- Schreiben von Unit Tests
+- Strukturierung größerer Projekte
 
 ---
 
 ## 🔮 Geplante Erweiterungen
 
-- Zahlungsintegration
-- Backend-Anbindung
-- Benutzeranmeldung
-- Reale Bestell-API
-- Such- und Filterfunktion
-- Dark Mode
+- 🔍 Suchfunktion für Gerichte
+- ❤️ Favoriten speichern
+- 👤 Benutzerkonto
+- 💳 Zahlungsintegration
+- 🌙 Dark Mode
+- 🌐 Mehrsprachigkeit
+- 🔗 Backend-Anbindung
+- 📦 Bestellhistorie
 
 ---
 
 ## 👨‍💻 Entwickler
 
-Entwickelt von Kadir Kahraman
+**Kadir Kahraman**
+
+GitHub:
+https://github.com/ITKadirKahraman
 
 ---
 
 ## 📄 Lizenz
 
-Dieses Projekt dient Lern- und Übungszwecken.
+Dieses Projekt wurde zu Lern- und Übungszwecken entwickelt.
