@@ -12,6 +12,14 @@ test(("calculate the price from order"), () => {
 
 test.only(("product amount"), () => {
     const warenkorb = [
-        {name: "Döner", price: 8.50, amount: 4}
+        {name: "Döner", price: 8, amount: 4}
     ]
+    assert.equal(berechneGesamtpreis(warenkorb), 32)
 })
+
+test("beruecksichtigt die Menge (3x der gleiche Artikel)", () => {
+    const warenkorb = [
+    { name: "Döner", price: 20, amount: 3},
+  ];
+  assert.equal(berechneGesamtpreis(warenkorb), 60);
+});
