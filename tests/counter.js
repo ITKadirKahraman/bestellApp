@@ -5,5 +5,5 @@ export function updateBasketAmount(basket, index, value) {
         basket.splice(index, 1);
     }
 
-    return basket[index].amount;
+    return basket;
 }
