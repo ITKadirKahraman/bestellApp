@@ -1,11 +1,19 @@
 export function pushToBasket(basket, product) {
-    basket.push(
-        {
-            name: product.name,
-            price: product.price,
-            amount: product.amount
-        }
+    const existingProduct = basket.find(
+        ietm => ietm.name === product.name
     );
+
+    if(existingProduct) {
+        existingProduct.amount++;
+    } else {
+        basket.push(
+            {
+                name: product.name,
+                price: product.price,
+                amount: 1
+            }
+        );
+    }
 
     return basket;
 }
