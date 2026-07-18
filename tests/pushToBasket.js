@@ -1,6 +1,6 @@
 export function pushToBasket(basket, product) {
     const existingProduct = basket.find(
-        ietm => ietm.name === product.name
+        item => item.name === product.name
     );
 
     if(existingProduct) {
