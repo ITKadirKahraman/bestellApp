@@ -95,42 +95,90 @@ oder mit Live Server öffnen.
 
 ## 🧪 Unit Tests
 
-Für die Kernfunktionen der Anwendung wurden Unit Tests mit dem nativen **Node.js Test Runner** erstellt.
+Für die Kernlogik der BestellApp wurden Unit Tests mit dem integrierten **Node.js Test Runner (`node:test`)** und **`assert/strict`** erstellt.
 
 ### Getestete Funktionen
 
-- ✅ Berechnung des Gesamtpreises
-- ✅ Berechnung der Artikelmenge
-- ✅ Hinzufügen von Produkten zum Warenkorb
-- ✅ Prüfung von Produktobjekten
-- ✅ Überprüfung von Array-Strukturen
+✅ **Warenkorb verwalten**
+- Produkt wird dem Warenkorb hinzugefügt
+- Bereits vorhandene Produkte werden nicht doppelt angelegt
+- Die Menge eines vorhandenen Produkts wird automatisch erhöht
 
-### Test-Framework
+```javascript
+pushToBasket(basket, product);
+```
 
-- Node.js (`node:test`)
+
+
+✅ **Gesamtpreis berechnen**
+- Berechnung mehrerer Produkte
+- Berücksichtigung der Produktmenge
+- Leerer Warenkorb ergibt `0`
+
+```javascript
+berechneGesamtpreis(warenkorb);
+```
+
+
+
+✅ **Produkte entfernen**
+- Produkt wird entfernt, sobald die Menge `0` erreicht
+- Menge wird korrekt reduziert
+
+```javascript
+updateBasketProduct(basket, index, value);
+```
+
+
+
+✅ **Produktmenge ändern**
+- Menge erhöhen
+- Menge verringern
+- Automatisches Entfernen eines Produkts bei Menge `0`
+
+```javascript
+updateBasketAmount(basket, index, value);
+```
+
+
+
+### Beispiel
+
+```javascript
+const basket = [];
+
+const product = {
+    name: "Pizza Döner with Hollandiase",
+    price: 13.50,
+    amount: 1
+};
+
+pushToBasket(basket, product);
+
+assert.deepStrictEqual(basket, [
+    {
+        name: "Pizza Döner with Hollandiase",
+        price: 13.50,
+        amount: 1
+    }
+]);
+```
+
+
+
+### Verwendete Technologien
+
+- Node.js Test Runner (`node:test`)
 - assert/strict
+- ES Modules
 
-### Tests starten
+Tests können über das Terminal ausgeführt werden:
 
 ```bash
 npm test
 ```
 
-Beispiel:
-
-```javascript
-test("berechnet den Gesamtpreis", () => {
-    const basket = [
-        {
-            name: "Pizza",
-            price: 15,
-            amount: 2
-        }
-    ];
-
-    assert.equal(berechneGesamtpreis(basket), 30);
-});
-```
+Die Unit Tests prüfen die zentrale Geschäftslogik der Anwendung unabhängig von der Benutzeroberfläche. Dadurch wird sichergestellt, dass Berechnungen, Warenkorb-Funktionen und Mengenänderungen zuverlässig funktionieren.
 
 ---
 
